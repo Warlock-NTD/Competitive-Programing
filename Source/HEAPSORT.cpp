@@ -2,7 +2,7 @@
   
 using namespace std; 
 
-void heapify(vector<int> arr, int n, int i) 
+inline void heapify(vector<int> arr, int n, int i) 
 {
     int largest = i; // Initialize largest as root
     int l = 2*i + 1; // left = 2*i + 1 
@@ -21,7 +21,7 @@ void heapify(vector<int> arr, int n, int i)
     } 
 } 
 
-void heapSort(int arr[], int n) 
+inline void heapSort(vector<int> arr, int n) 
 {
     for (int i = n / 2 - 1; i >= 0; i--) 
         heapify(arr, n, i); 
@@ -33,7 +33,7 @@ void heapSort(int arr[], int n)
     } 
 } 
 
-void printArray(vector<int> arr, int n) 
+inline void printArray(vector<int> arr, int n) 
 { 
     for (int i=0; i<n; ++i) 
         cout << arr[i] << " "; 
